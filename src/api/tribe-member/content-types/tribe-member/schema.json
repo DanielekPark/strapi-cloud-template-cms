@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tribe_members",
+  "info": {
+    "singularName": "tribe-member",
+    "pluralName": "tribe-members",
+    "displayName": "Tribe Member"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Email": {
+      "type": "text"
+    },
+    "Position": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "text"
+    }
+  }
+}

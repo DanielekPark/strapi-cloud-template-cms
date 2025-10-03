@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memberships",
+  "info": {
+    "singularName": "membership",
+    "pluralName": "memberships",
+    "displayName": "Membership"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "STI_Photo_ID": {
+      "type": "text"
+    },
+    "Update_Form": {
+      "type": "text"
+    },
+    "Fee_Schedule": {
+      "type": "text"
+    },
+    "Enrollment": {
+      "type": "text"
+    }
+  }
+}
