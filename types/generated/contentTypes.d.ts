@@ -373,36 +373,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
-  collectionName: 'about_pages';
-  info: {
-    displayName: 'About-Page';
-    pluralName: 'about-pages';
-    singularName: 'about-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    Email: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::about-page.about-page'
-    > &
-      Schema.Attribute.Private;
-    Name: Schema.Attribute.Text;
-    Position: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   collectionName: 'abouts';
   info: {
@@ -630,7 +600,7 @@ export interface ApiMembershipMembership extends Struct.CollectionTypeSchema {
 export interface ApiTribeMemberTribeMember extends Struct.CollectionTypeSchema {
   collectionName: 'tribe_members';
   info: {
-    displayName: 'Tribe Member';
+    displayName: 'About-Page';
     pluralName: 'tribe-members';
     singularName: 'tribe-member';
   };
@@ -1166,7 +1136,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
