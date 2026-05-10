@@ -34,6 +34,9 @@
     },
     "Link": {
       "type": "text"
+    },
+    "Link_Type": {
+      "type": "string"
     }
   }
 }
